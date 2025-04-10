@@ -1,0 +1,66 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+
+defaults:
+  run:
+    working-directory: ./web
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [16]
+
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@master
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 9
+
+      - name: Install Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies 📦
+        run: pnpm install
+
+      - name: Run linter 👀
+        run: pnpm lint
+
+      - name: Run tests 🧪
+        run: pnpm test
+
+      - name: Debug 🐛
+        run: echo GITHUB_SHA=${GITHUB_SHA}
+
+      - name: Build 🏗️
+        run: mv .env.production .env && echo GITHUB_SHA=${GITHUB_SHA} >> .env && pnpm run generate
+
+      - name: Cloudflare Deploy 🚀
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: httpsms
+          directory: web/dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Firebase Deploy 🚀
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          channelId: live
+          entryPoint: "./web"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_HTTPSMS_86C51 }}"
+          projectId: httpsms-86c51
