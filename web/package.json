@@ -39,7 +39,7 @@
     "nuxt": "^2.18.1",
     "nuxt-highlightjs": "^1.0.3",
     "qrcode": "^1.5.0",
-    "ufo": "^1.5.4",
+    "ufo": "^1.6.1",
     "vue": "^2.7.16",
     "vue-chartjs": "^5.3.2",
     "vue-class-component": "^7.2.6",
