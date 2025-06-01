@@ -1,6 +1,7 @@
 module github.com/NdoleStudio/httpsms
 
-go 1.22.7
+go 1.23.0
+
 toolchain go1.24.1
 
 require (
@@ -43,11 +44,11 @@ require (
 	github.com/thedevsaddam/govalidator v1.9.10
 	github.com/uptrace/uptrace-go v1.35.0
 	github.com/xuri/excelize/v2 v2.9.0
-	go.opentelemetry.io/otel v1.35.0
-	go.opentelemetry.io/otel/metric v1.35.0
-	go.opentelemetry.io/otel/sdk v1.35.0
+	go.opentelemetry.io/otel v1.36.0
+	go.opentelemetry.io/otel/metric v1.36.0
+	go.opentelemetry.io/otel/sdk v1.36.0
 	go.opentelemetry.io/otel/sdk/metric v1.35.0
-	go.opentelemetry.io/otel/trace v1.35.0
+	go.opentelemetry.io/otel/trace v1.36.0
 	google.golang.org/api v0.224.0
 	google.golang.org/protobuf v1.36.6
 	gorm.io/driver/postgres v1.5.11
@@ -155,7 +156,7 @@ require (
 	golang.org/x/net v0.37.0 // indirect
 	golang.org/x/oauth2 v0.27.0 // indirect
 	golang.org/x/sync v0.12.0 // indirect
-	golang.org/x/sys v0.31.0 // indirect
+	golang.org/x/sys v0.33.0 // indirect
 	golang.org/x/text v0.23.0 // indirect
 	golang.org/x/time v0.10.0 // indirect
 	golang.org/x/tools v0.31.0 // indirect
