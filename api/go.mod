@@ -1,6 +1,7 @@
 module github.com/NdoleStudio/httpsms
 
-go 1.22.7
+go 1.23.0
+
 toolchain go1.24.1
 
 require (
@@ -30,7 +31,7 @@ require (
 	github.com/jszwec/csvutil v1.10.0
 	github.com/lib/pq v1.10.9
 	github.com/matcornic/hermes/v2 v2.1.0
-	github.com/nyaruka/phonenumbers v1.6.0
+	github.com/nyaruka/phonenumbers v1.6.4
 	github.com/palantir/stacktrace v0.0.0-20161112013806-78658fd2d177
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/pkg/errors v0.9.1
