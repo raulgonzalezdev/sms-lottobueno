@@ -1,6 +1,7 @@
 module github.com/NdoleStudio/httpsms
 
-go 1.22.7
+go 1.23.0
+
 toolchain go1.24.1
 
 require (
@@ -51,7 +52,7 @@ require (
 	google.golang.org/api v0.224.0
 	google.golang.org/protobuf v1.36.6
 	gorm.io/driver/postgres v1.5.11
-	gorm.io/gorm v1.25.12
+	gorm.io/gorm v1.30.2
 	gorm.io/plugin/opentelemetry v0.1.11
 )
 
