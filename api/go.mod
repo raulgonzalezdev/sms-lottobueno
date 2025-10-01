@@ -1,6 +1,7 @@
 module github.com/NdoleStudio/httpsms
 
-go 1.22.7
+go 1.23.0
+
 toolchain go1.24.1
 
 require (
@@ -34,8 +35,8 @@ require (
 	github.com/palantir/stacktrace v0.0.0-20161112013806-78658fd2d177
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/pkg/errors v0.9.1
-	github.com/redis/go-redis/extra/redisotel/v9 v9.7.1
-	github.com/redis/go-redis/v9 v9.7.3
+	github.com/redis/go-redis/extra/redisotel/v9 v9.15.1
+	github.com/redis/go-redis/v9 v9.15.1
 	github.com/rs/zerolog v1.34.0
 	github.com/sendgrid/sendgrid-go v3.16.0+incompatible
 	github.com/stretchr/testify v1.10.0
@@ -119,7 +120,7 @@ require (
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/planetscale/vtprotobuf v0.6.1-0.20240319094008-0393e58bdf10 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/redis/go-redis/extra/rediscmd/v9 v9.7.1 // indirect
+	github.com/redis/go-redis/extra/rediscmd/v9 v9.15.1 // indirect
 	github.com/richardlehane/mscfb v1.0.4 // indirect
 	github.com/richardlehane/msoleps v1.0.4 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
